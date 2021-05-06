@@ -60,12 +60,16 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 						// We depend on the tileset. If the tileset changes, the map also needs to rebuild.
 						context.AddDependency(tileset.Source);
 					}
-					else
+					else if(tileset.Image != null)
 					{
                         tileset.Image.Source = getTilesetSource(tileset.Image.Source);
 						ContentLogger.Log($"Adding dependency for {tileset.Image.Source}");
 						context.AddDependency(tileset.Image.Source);
 					}
+                    else
+                    {
+                        // TODO
+                    }
 				}
 
 				ImportLayers(context, map.Layers, Path.GetDirectoryName(mapFilePath));

@@ -2,12 +2,13 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.Collections.Generic;
 
 namespace MonoGame.Extended.Tiled
 {
-	public class TiledMapTilesetReader : ContentTypeReader<TiledMapTileset>
+	public class TiledMapTilesetReader : ContentTypeReader<ITileset>
 	{
-		protected override TiledMapTileset Read(ContentReader reader, TiledMapTileset existingInstance)
+		protected override ITileset Read(ContentReader reader, ITileset existingInstance)
 		{
 			if (existingInstance != null)
 				return existingInstance;
@@ -15,9 +16,11 @@ namespace MonoGame.Extended.Tiled
 			return ReadTileset(reader);
 		}
 
-		public static TiledMapTileset ReadTileset(ContentReader reader)
+		public static ITileset ReadTileset(ContentReader reader)
 		{
-			var texture = reader.ReadExternalReference<Texture2D>();
+            Texture2D texture = null;
+            Dictionary<int, Texture2D> textureDict = null;
+            var tilesetImageFlag = reader.ReadBoolean();
             var tileWidth = reader.ReadInt32();
             var tileHeight = reader.ReadInt32();
             var tileCount = reader.ReadInt32();
@@ -25,8 +28,26 @@ namespace MonoGame.Extended.Tiled
             var margin = reader.ReadInt32();
             var columns = reader.ReadInt32();
             var explicitTileCount = reader.ReadInt32();
+            if (tilesetImageFlag)
+                texture = reader.ReadExternalReference<Texture2D>();
+            else
+            {
+                textureDict = new Dictionary<int, Texture2D>();
+                for(var i=0; i < explicitTileCount; i++)
+                {
+                    var tileTexture = reader.ReadExternalReference<Texture2D>();
+                    textureDict.Add(i, tileTexture);
+                }
+            }
 
-            var tileset = new TiledMapTileset(texture, tileWidth, tileHeight, tileCount, spacing, margin, columns);
+            ITileset tileset;
+            if(tilesetImageFlag)
+                tileset = new TiledMapTileset(texture, tileWidth, tileHeight, tileCount, spacing, margin, columns);
+            else
+            {
+                tileset = new TiledMapCollectionTileset(textureDict, "test", tileWidth, tileHeight, tileCount, spacing, margin, columns);
+            }
+                
 
             for (var tileIndex = 0; tileIndex < explicitTileCount; tileIndex++)
             {
@@ -47,7 +68,7 @@ namespace MonoGame.Extended.Tiled
             return tileset;
 		}
 
-		private static TiledMapTilesetTileAnimationFrame[] ReadTiledMapTilesetAnimationFrames(ContentReader reader, TiledMapTileset tileset, int animationFramesCount)
+		private static TiledMapTilesetTileAnimationFrame[] ReadTiledMapTilesetAnimationFrames(ContentReader reader, ITileset tileset, int animationFramesCount)
 		{
 			var animationFrames = new TiledMapTilesetTileAnimationFrame[animationFramesCount];
 
@@ -62,7 +83,7 @@ namespace MonoGame.Extended.Tiled
 			return animationFrames;
 		}
 
-		private static TiledMapTilesetTile ReadTiledMapTilesetTile(ContentReader reader, TiledMapTileset tileset, Func<TiledMapObject[], TiledMapTilesetTile> createTile)
+		private static TiledMapTilesetTile ReadTiledMapTilesetTile(ContentReader reader, ITileset tileset, Func<TiledMapObject[], TiledMapTilesetTile> createTile)
 		{
 			var objectCount = reader.ReadInt32();
 			var objects = new TiledMapObject[objectCount];
@@ -73,7 +94,7 @@ namespace MonoGame.Extended.Tiled
 			return createTile(objects);
 		}
 
-		private static TiledMapObject ReadTiledMapObject(ContentReader reader, TiledMapTileset tileset)
+		private static TiledMapObject ReadTiledMapObject(ContentReader reader, ITileset tileset)
 		{
 			var objectType = (TiledMapObjectType)reader.ReadByte();
 			var identifier = reader.ReadInt32();

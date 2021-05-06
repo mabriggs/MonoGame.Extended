@@ -39,12 +39,22 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 				var tilesetSerializer = new XmlSerializer(typeof(TiledMapTilesetContent));
 				var tileset = (TiledMapTilesetContent)tilesetSerializer.Deserialize(reader);
 
-                tileset.Image.Source = Path.Combine(Path.GetDirectoryName(filePath), tileset.Image.Source);
-                ContentLogger.Log($"Adding dependency '{tileset.Image.Source}'");
-				context.AddDependency(tileset.Image.Source);
-
+                if(tileset.Image != null)
+                {
+                    tileset.Image.Source = Path.Combine(Path.GetDirectoryName(filePath), tileset.Image.Source);
+                    ContentLogger.Log($"Adding dependency '{tileset.Image.Source}'");
+                    context.AddDependency(tileset.Image.Source);
+                }
+                    
 				foreach (var tile in tileset.Tiles)
 				{
+                    if(tile.Image != null)
+                    {
+                        tile.Image.Source = Path.Combine(Path.GetDirectoryName(filePath), tile.Image.Source);
+                        ContentLogger.Log($"Adding dependency '{tile.Image.Source}'");
+                        context.AddDependency(tile.Image.Source);
+                    }
+
 				    foreach (var obj in tile.Objects)
 				    {
 				        if (!string.IsNullOrWhiteSpace(obj.TemplateSource))

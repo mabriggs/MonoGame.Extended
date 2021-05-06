@@ -60,10 +60,10 @@ namespace MonoGame.Extended.Tiled
             }
         }
         
-        private static TiledMapTileset ReadTileset(ContentReader reader, TiledMap map)
+        private static ITileset ReadTileset(ContentReader reader, TiledMap map)
         {
             var external = reader.ReadBoolean();
-			var tileset = external ? reader.ReadExternalReference<TiledMapTileset>() : TiledMapTilesetReader.ReadTileset(reader);
+			var tileset = external ? reader.ReadExternalReference<ITileset>() : TiledMapTilesetReader.ReadTileset(reader);
 
 			return tileset;
         }

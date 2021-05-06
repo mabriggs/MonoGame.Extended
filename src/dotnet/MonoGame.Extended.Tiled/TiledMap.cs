@@ -13,8 +13,8 @@ namespace MonoGame.Extended.Tiled
         private readonly Dictionary<string, TiledMapLayer> _layersByName = new Dictionary<string, TiledMapLayer>();
         private readonly List<TiledMapObjectLayer> _objectLayers = new List<TiledMapObjectLayer>();
         private readonly List<TiledMapTileLayer> _tileLayers = new List<TiledMapTileLayer>();
-        private readonly List<TiledMapTileset> _tilesets = new List<TiledMapTileset>();
-		private readonly List<Tuple<TiledMapTileset, int>> _firstGlobalIdentifiers = new List<Tuple<TiledMapTileset, int>>();
+        private readonly List<ITileset> _tilesets = new List<ITileset>();
+		private readonly List<Tuple<ITileset, int>> _firstGlobalIdentifiers = new List<Tuple<ITileset, int>>();
 
         public string Name { get; }
         public int Width { get; }
@@ -24,7 +24,7 @@ namespace MonoGame.Extended.Tiled
         public TiledMapTileDrawOrder RenderOrder { get; }
         public TiledMapOrientation Orientation { get; }
         public TiledMapProperties Properties { get; }
-        public ReadOnlyCollection<TiledMapTileset> Tilesets { get; }
+        public ReadOnlyCollection<ITileset> Tilesets { get; }
         public ReadOnlyCollection<TiledMapLayer> Layers { get; }
         public ReadOnlyCollection<TiledMapImageLayer> ImageLayers { get; }
         public ReadOnlyCollection<TiledMapTileLayer> TileLayers { get; }
@@ -40,7 +40,7 @@ namespace MonoGame.Extended.Tiled
             ImageLayers = new ReadOnlyCollection<TiledMapImageLayer>(_imageLayers);
             TileLayers = new ReadOnlyCollection<TiledMapTileLayer>(_tileLayers);
             ObjectLayers = new ReadOnlyCollection<TiledMapObjectLayer>(_objectLayers);
-            Tilesets = new ReadOnlyCollection<TiledMapTileset>(_tilesets);
+            Tilesets = new ReadOnlyCollection<ITileset>(_tilesets);
             Properties = new TiledMapProperties();
         }
 
@@ -57,10 +57,10 @@ namespace MonoGame.Extended.Tiled
             BackgroundColor = backgroundColor;
         }
 
-        public void AddTileset(TiledMapTileset tileset, int firstGlobalIdentifier)
+        public void AddTileset(ITileset tileset, int firstGlobalIdentifier)
         {
             _tilesets.Add(tileset);
-			_firstGlobalIdentifiers.Add(new Tuple<TiledMapTileset, int>(tileset, firstGlobalIdentifier));
+			_firstGlobalIdentifiers.Add(new Tuple<ITileset, int>(tileset, firstGlobalIdentifier));
         }
 
 		public void AddLayer(TiledMapLayer layer)
@@ -106,7 +106,7 @@ namespace MonoGame.Extended.Tiled
             return GetLayer(layerName) as T;
         }
 
-        public TiledMapTileset GetTilesetByTileGlobalIdentifier(int tileIdentifier)
+        public ITileset GetTilesetByTileGlobalIdentifier(int tileIdentifier)
         {
 			foreach (var tileset in _firstGlobalIdentifiers)
 			{
@@ -117,7 +117,7 @@ namespace MonoGame.Extended.Tiled
             return null;
         }
 
-		public int GetTilesetFirstGlobalIdentifier(TiledMapTileset tileset)
+		public int GetTilesetFirstGlobalIdentifier(ITileset tileset)
 		{
 			return _firstGlobalIdentifiers.FirstOrDefault(t => t.Item1 == tileset).Item2;
 		}

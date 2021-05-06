@@ -9,7 +9,7 @@ namespace MonoGame.Extended.Tiled
         public readonly TimeSpan Duration;
         public readonly Vector2[] TextureCoordinates;
 
-        internal TiledMapTilesetTileAnimationFrame(TiledMapTileset tileset, int localTileIdentifier, int durationInMilliseconds)
+        internal TiledMapTilesetTileAnimationFrame(ITileset tileset, int localTileIdentifier, int durationInMilliseconds)
         {
             LocalTileIdentifier = localTileIdentifier;
             Duration = new TimeSpan(0, 0, 0, 0, durationInMilliseconds);
@@ -17,9 +17,9 @@ namespace MonoGame.Extended.Tiled
             CreateTextureCoordinates(tileset);
         }
 
-        private void CreateTextureCoordinates(TiledMapTileset tileset)
+        private void CreateTextureCoordinates(ITileset tileset)
         {
-            var sourceRectangle = tileset.GetTileRegion(LocalTileIdentifier);
+            var sourceRectangle = ((TiledMapTileset)tileset).GetTileRegion(LocalTileIdentifier);
             var texture = tileset.Texture;
             var texelLeft = (float)sourceRectangle.X / texture.Width;
             var texelTop = (float)sourceRectangle.Y / texture.Height;

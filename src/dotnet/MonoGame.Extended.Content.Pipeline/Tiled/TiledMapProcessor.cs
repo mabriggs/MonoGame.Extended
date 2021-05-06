@@ -95,11 +95,18 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                         //var externalReference = new ExternalReference<Texture2DContent>(tileset.Image.Source);
                         var parameters = new OpaqueDataDictionary
                         {
-                            { "ColorKeyColor", tileset.Image.TransparentColor },
+                            //{ "ColorKeyColor", tileset.Image.TransparentColor },
                             { "ColorKeyEnabled", true }
                         };
-                        //tileset.Image.ContentRef = context.BuildAsset<Texture2DContent, Texture2DContent>(externalReference, "", parameters, "", "");
-                        contentItem.BuildExternalReference<Texture2DContent>(context, tileset.Image.Source, parameters);
+                        if (tileset.Image != null)
+                        {
+                            // TODO: what about transparent colour when there's no tileset image?
+
+                            parameters.Add("ColorKeyColor", tileset.Image.TransparentColor);
+
+                            //tileset.Image.ContentRef = context.BuildAsset<Texture2DContent, Texture2DContent>(externalReference, "", parameters, "", "");
+                            contentItem.BuildExternalReference<Texture2DContent>(context, tileset.Image.Source, parameters);
+                        }       
 					}
 					else
 					{

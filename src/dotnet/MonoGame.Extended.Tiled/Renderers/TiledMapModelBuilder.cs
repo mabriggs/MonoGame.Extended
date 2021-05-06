@@ -56,6 +56,9 @@ namespace MonoGame.Extended.Tiled.Renderers
                     var sourceRectangle = TiledMapHelper.GetTileSourceRectangle(localTileIdentifier, tileset.TileWidth, tileset.TileHeight, tilesetColumns, tileset.Margin, tileset.Spacing);
                     var flipFlags = tile.Flags;
 
+                    if (!tileset.HasSharedTexture)
+                        texture = tileset.GetTileTexture(localTileIdentifier);
+
                     // animated tiles
                     var tilesetTile = tileset.Tiles.FirstOrDefault(x => x.LocalTileIdentifier == localTileIdentifier);
 

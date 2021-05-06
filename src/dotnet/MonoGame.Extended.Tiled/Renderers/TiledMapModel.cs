@@ -8,7 +8,7 @@ namespace MonoGame.Extended.Tiled.Renderers
     public class TiledMapModel : IDisposable
     {
         private readonly TiledMap _map;
-        private readonly Dictionary<TiledMapTileset, List<TiledMapTilesetAnimatedTile>> _animatedTilesByTileset;
+        private readonly Dictionary<ITileset, List<TiledMapTilesetAnimatedTile>> _animatedTilesByTileset;
 
         public TiledMapModel(TiledMap map, Dictionary<TiledMapLayer, TiledMapLayerModel[]> layersOfLayerModels)
         {
@@ -26,7 +26,7 @@ namespace MonoGame.Extended.Tiled.Renderers
 					model.Dispose();
         }
 
-        public ReadOnlyCollection<TiledMapTileset> Tilesets => _map.Tilesets;
+        public ReadOnlyCollection<ITileset> Tilesets => _map.Tilesets;
         public ReadOnlyCollection<TiledMapLayer> Layers => _map.Layers;
 
         // each layer has many models

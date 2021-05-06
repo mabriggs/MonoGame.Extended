@@ -4,7 +4,7 @@ namespace MonoGame.Extended.Tiled
 {
     public sealed class TiledMapTileObject : TiledMapObject
     {
-        public TiledMapTileObject(int identifier, string name, TiledMapTileset tileset, TiledMapTilesetTile tile, 
+        public TiledMapTileObject(int identifier, string name, ITileset tileset, TiledMapTilesetTile tile, 
             Size2 size, Vector2 position, float rotation = 0, float opacity = 1, bool isVisible = true, string type = null) 
             : base(identifier, name, size, position, rotation, opacity, isVisible, type)
         {
@@ -13,6 +13,6 @@ namespace MonoGame.Extended.Tiled
         }
 
         public TiledMapTilesetTile Tile { get; }
-        public TiledMapTileset Tileset { get; }
+        public ITileset Tileset { get; }
     }
 }

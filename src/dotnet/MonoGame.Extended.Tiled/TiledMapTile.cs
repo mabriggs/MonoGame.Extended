@@ -1,4 +1,6 @@
-﻿namespace MonoGame.Extended.Tiled
+﻿using Microsoft.Xna.Framework.Graphics;
+
+namespace MonoGame.Extended.Tiled
 {
     public struct TiledMapTile
     {
