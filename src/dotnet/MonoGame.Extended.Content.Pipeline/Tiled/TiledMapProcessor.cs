@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Microsoft.Xna.Framework.Content.Pipeline;
@@ -14,7 +15,7 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 {
     public static class TiledMapContentHelper
     {
-        public static void Process(TiledMapObjectContent obj, ContentProcessorContext context)
+        public static void Process(TiledMapObjectContent obj, ContentProcessorContext context, TiledMapContent map)
         {
             if (!string.IsNullOrWhiteSpace(obj.TemplateSource))
             {
@@ -23,10 +24,19 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 
                 // Nothing says a template can't reference another template.
                 // Yay recusion!
-                Process(template.Object, context);
+                Process(template.Object, context, map);
 
                 if (!obj._globalIdentifier.HasValue && template.Object._globalIdentifier.HasValue)
+                {
                     obj.GlobalIdentifier = template.Object.GlobalIdentifier;
+                    if(map != null)
+                    {
+                        var path = Path.GetFullPath(template.Tileset.Source);
+                        var gidOffset = map.Tilesets.First(ts => ts.Source == path);
+                        obj.GlobalIdentifier += (uint)gidOffset.FirstGlobalIdentifier - 1;
+                    }
+                }
+                    
 
                 if (!obj._height.HasValue && template.Object._height.HasValue)
                     obj.Height = template.Object.Height;
@@ -166,7 +176,7 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 				        ContentLogger.Log($"Processing object layer '{objectLayer.Name}'");
 
 				        foreach (var obj in objectLayer.Objects)
-				            TiledMapContentHelper.Process(obj, context);
+				            TiledMapContentHelper.Process(obj, context, map);
 
 				        ContentLogger.Log($"Processed object layer '{objectLayer.Name}'");
 				        break;

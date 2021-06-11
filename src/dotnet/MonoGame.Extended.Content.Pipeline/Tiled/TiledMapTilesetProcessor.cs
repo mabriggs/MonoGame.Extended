@@ -39,7 +39,7 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                     }
 				    foreach (var obj in tile.Objects)
 				    {
-				        TiledMapContentHelper.Process(obj, context);
+				        TiledMapContentHelper.Process(obj, context, null);
 				    }
 				}
 
