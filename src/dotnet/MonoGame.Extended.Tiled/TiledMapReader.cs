@@ -166,7 +166,7 @@ namespace MonoGame.Extended.Tiled
                     var tileset = map.GetTilesetByTileGlobalIdentifier(tile.GlobalIdentifier);
                     var localTileIdentifier = tile.GlobalIdentifier - map.GetTilesetFirstGlobalIdentifier(tileset);
                     var tilesetTile = tileset.Tiles.FirstOrDefault(x => x.LocalTileIdentifier == localTileIdentifier);
-                    mapObject = new TiledMapTileObject(identifier, name, tileset, tilesetTile, size, position, rotation, opacity, isVisible, type);
+                    mapObject = new TiledMapTileObject(globalTileIdentifierWithFlags, identifier, name, tileset, tilesetTile, size, position, rotation, opacity, isVisible, type);
                     break;
                 case TiledMapObjectType.Ellipse:
                     mapObject = new TiledMapEllipseObject(identifier, name, size, position, rotation, opacity, isVisible);
