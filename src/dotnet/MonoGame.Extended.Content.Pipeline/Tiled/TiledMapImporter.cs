@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using MonoGame.Extended.Tiled.Serialization;
@@ -65,6 +66,14 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                         tileset.Image.Source = getTilesetSource(tileset.Image.Source);
 						ContentLogger.Log($"Adding dependency for {tileset.Image.Source}");
 						context.AddDependency(tileset.Image.Source);
+
+                        var normalProp = tileset.Properties.FirstOrDefault(p => p.Name == TiledMapTilesetWriter.NormalTilesetPropertyName);
+                        if (normalProp != null)
+                        {
+                            normalProp.ValueAttribute = getTilesetSource(normalProp.ValueAttribute);
+                            ContentLogger.Log($"Adding dependency for {normalProp.ValueAttribute}");
+                            context.AddDependency(normalProp.ValueAttribute);
+                        }
 					}
                     else
                     {

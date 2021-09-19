@@ -18,7 +18,7 @@ namespace MonoGame.Extended.Tiled
 
 		public static ITileset ReadTileset(ContentReader reader)
 		{
-            Texture2D texture = null;
+            Texture2D texture = null, normalTexture = null;
             Dictionary<int, Texture2D> textureDict = null;
             var tilesetImageFlag = reader.ReadBoolean();
             var tileWidth = reader.ReadInt32();
@@ -40,9 +40,15 @@ namespace MonoGame.Extended.Tiled
                 }
             }
 
+            var normalTextureFlag = reader.ReadBoolean();
+            if (normalTextureFlag)
+            {
+               normalTexture = reader.ReadExternalReference<Texture2D>();
+            }
+
             ITileset tileset;
             if(tilesetImageFlag)
-                tileset = new TiledMapTileset(texture, tileWidth, tileHeight, tileCount, spacing, margin, columns);
+                tileset = new TiledMapTileset(texture, normalTexture, tileWidth, tileHeight, tileCount, spacing, margin, columns);
             else
             {
                 tileset = new TiledMapCollectionTileset(textureDict, "test", tileWidth, tileHeight, tileCount, spacing, margin, columns);
@@ -65,6 +71,7 @@ namespace MonoGame.Extended.Tiled
             }
 
             ReadProperties(reader, tileset.Properties);
+
             return tileset;
 		}
 

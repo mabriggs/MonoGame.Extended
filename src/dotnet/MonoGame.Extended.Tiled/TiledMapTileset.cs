@@ -19,6 +19,7 @@ namespace MonoGame.Extended.Tiled
         int Margin { get; }
         bool HasSharedTexture { get; }
         Texture2D Texture { get; }
+        Texture2D NormalTexture { get; }
         List<TiledMapTilesetTile> Tiles { get; }
         TiledMapProperties Properties { get; }
         Texture2D GetTileTexture(int localId);
@@ -46,6 +47,7 @@ namespace MonoGame.Extended.Tiled
 
         public string Name { get; }
         public Texture2D Texture => throw new NotImplementedException();
+        public Texture2D NormalTexture => throw new NotImplementedException();
 
         public TextureRegion2D GetRegion(int column, int row)
         {
@@ -81,9 +83,11 @@ namespace MonoGame.Extended.Tiled
 
     public class TiledMapTileset : ITileset
     {
-        public TiledMapTileset(Texture2D texture, int tileWidth, int tileHeight, int tileCount, int spacing, int margin, int columns)
+        public TiledMapTileset(Texture2D texture, Texture2D normalTexture,
+            int tileWidth, int tileHeight, int tileCount, int spacing, int margin, int columns)
         {
             Texture = texture;
+            NormalTexture = normalTexture;
             TileWidth = tileWidth;
             TileHeight = tileHeight;
             TileCount = tileCount;
@@ -96,6 +100,7 @@ namespace MonoGame.Extended.Tiled
 
         public string Name => Texture.Name;
         public Texture2D Texture { get; }
+        public Texture2D NormalTexture { get; }
 
         public TextureRegion2D GetRegion(int column, int row)
         {

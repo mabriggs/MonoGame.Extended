@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using System;
+using System.Linq;
 
 namespace MonoGame.Extended.Content.Pipeline.Tiled
 {
@@ -28,6 +29,12 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                     parameters.Add("ColorKeyColor", tileset.Image.TransparentColor);
                     //tileset.Image.ContentRef = context.BuildAsset<Texture2DContent, Texture2DContent>(externalReference, "", parameters, "", "");
                     contentItem.BuildExternalReference<Texture2DContent>(context, tileset.Image.Source, parameters);
+
+                    var normalProp = tileset.Properties.FirstOrDefault(p => p.Name == TiledMapTilesetWriter.NormalTilesetPropertyName);
+                    if (normalProp != null)
+                    {
+                        contentItem.BuildExternalReference<Texture2DContent>(context, normalProp.Value, parameters);
+                    }
                 }
 			    
 				foreach (var tile in tileset.Tiles)

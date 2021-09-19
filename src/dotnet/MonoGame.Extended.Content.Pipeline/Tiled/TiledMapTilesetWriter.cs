@@ -5,12 +5,15 @@ using System;
 using System.Globalization;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using MonoGame.Extended.Tiled.Serialization;
+using System.Linq;
 
 namespace MonoGame.Extended.Content.Pipeline.Tiled
 {
 	[ContentTypeWriter]
 	public class TiledMapTilesetWriter : ContentTypeWriter<TiledMapTilesetContentItem>
 	{
+        public const string NormalTilesetPropertyName = "normal";
+
 		public override string GetRuntimeReader(TargetPlatform targetPlatform) => "MonoGame.Extended.Tiled.TiledMapTilesetReader, MonoGame.Extended.Tiled";
 
 	    public override string GetRuntimeType(TargetPlatform targetPlatform) => "MonoGame.Extended.Tiled.TiledMapTileset, MonoGame.Extended.Tiled";
@@ -52,11 +55,25 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                 }
             }
 
+            WriteNormalImage(writer, tileset, externalReferenceRepository);
+
             foreach (var tilesetTile in tileset.Tiles)
                 WriteTilesetTile(writer, tilesetTile);
 
             writer.WriteTiledMapProperties(tileset.Properties);
 		}
+
+        private static void WriteNormalImage(ContentWriter writer, TiledMapTilesetContent tileset, IExternalReferenceRepository externalReferenceRepository)
+        {
+            var normalTileset = tileset.Properties.FirstOrDefault(p => p.Name == NormalTilesetPropertyName);
+            writer.Write(normalTileset != null);
+            if (normalTileset != null)
+            {
+                var imageFile = normalTileset.Value;
+                var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(imageFile);
+                writer.WriteExternalReference(externalReference);
+            }
+        }
 
         private static void WriteTilesetTile(ContentWriter writer, TiledMapTilesetTileContent tilesetTile)
         {

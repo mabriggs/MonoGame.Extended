@@ -116,6 +116,12 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 
                             //tileset.Image.ContentRef = context.BuildAsset<Texture2DContent, Texture2DContent>(externalReference, "", parameters, "", "");
                             contentItem.BuildExternalReference<Texture2DContent>(context, tileset.Image.Source, parameters);
+
+                            var normalProp = tileset.Properties.FirstOrDefault(p => p.Name == TiledMapTilesetWriter.NormalTilesetPropertyName);
+                            if(normalProp != null)
+                            {
+                                contentItem.BuildExternalReference<Texture2DContent>(context, normalProp.Value, parameters);
+                            }
                         }       
 					}
 					else

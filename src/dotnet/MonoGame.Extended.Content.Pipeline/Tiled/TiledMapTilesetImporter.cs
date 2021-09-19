@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Xml.Serialization;
 using MonoGame.Extended.Tiled.Serialization;
+using System.Linq;
 
 namespace MonoGame.Extended.Content.Pipeline.Tiled
 {
@@ -44,6 +45,14 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                     tileset.Image.Source = Path.Combine(Path.GetDirectoryName(filePath), tileset.Image.Source);
                     ContentLogger.Log($"Adding dependency '{tileset.Image.Source}'");
                     context.AddDependency(tileset.Image.Source);
+                }
+
+                var normalProp = tileset.Properties.FirstOrDefault(p => p.Name == TiledMapTilesetWriter.NormalTilesetPropertyName);
+                if (normalProp != null)
+                {
+                    normalProp.ValueAttribute = Path.Combine(Path.GetDirectoryName(filePath), normalProp.ValueAttribute);
+                    ContentLogger.Log($"Adding dependency '{normalProp.ValueAttribute}'");
+                    context.AddDependency(normalProp.ValueAttribute);
                 }
                     
 				foreach (var tile in tileset.Tiles)
