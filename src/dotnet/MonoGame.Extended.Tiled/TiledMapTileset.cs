@@ -23,17 +23,20 @@ namespace MonoGame.Extended.Tiled
         List<TiledMapTilesetTile> Tiles { get; }
         TiledMapProperties Properties { get; }
         Texture2D GetTileTexture(int localId);
+        Texture2D GetTileNormalTexture(int localId);
         TextureRegion2D GetRegion(int column, int row);
     }
 
     public class TiledMapCollectionTileset : ITileset
     {
         private Dictionary<int, Texture2D> _texureDict;
+        private Dictionary<int, Texture2D> _normalTexureDict;
 
-        public TiledMapCollectionTileset(Dictionary<int, Texture2D> textureDict, string name,
+        public TiledMapCollectionTileset(Dictionary<int, Texture2D> textureDict, Dictionary<int, Texture2D> normalTexureDict, string name,
             int tileWidth, int tileHeight, int tileCount, int spacing, int margin, int columns)
         {
             _texureDict = textureDict;
+            _normalTexureDict = normalTexureDict;
             Name = name;
             TileWidth = tileWidth;
             TileHeight = tileHeight;
@@ -78,6 +81,11 @@ namespace MonoGame.Extended.Tiled
         public Texture2D GetTileTexture(int localId)
         {
             return _texureDict[localId];
+        }
+
+        public Texture2D GetTileNormalTexture(int localId)
+        {
+            return _normalTexureDict[localId];
         }
     }
 
@@ -129,7 +137,12 @@ namespace MonoGame.Extended.Tiled
         }
         public Texture2D GetTileTexture(int localId)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
+        }
+
+        public Texture2D GetTileNormalTexture(int localId)
+        {
+            throw new NotSupportedException();
         }
     }
 }

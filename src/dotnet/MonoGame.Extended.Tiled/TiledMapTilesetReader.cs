@@ -19,7 +19,7 @@ namespace MonoGame.Extended.Tiled
 		public static ITileset ReadTileset(ContentReader reader)
 		{
             Texture2D texture = null, normalTexture = null;
-            Dictionary<int, Texture2D> textureDict = null;
+            Dictionary<int, Texture2D> textureDict = null, normalTextureDict = null;
             var tilesetImageFlag = reader.ReadBoolean();
             var tileWidth = reader.ReadInt32();
             var tileHeight = reader.ReadInt32();
@@ -29,21 +29,32 @@ namespace MonoGame.Extended.Tiled
             var columns = reader.ReadInt32();
             var explicitTileCount = reader.ReadInt32();
             if (tilesetImageFlag)
+            {
                 texture = reader.ReadExternalReference<Texture2D>();
+                var normalTextureFlag = reader.ReadBoolean();
+                if (normalTextureFlag)
+                {
+                    normalTexture = reader.ReadExternalReference<Texture2D>();
+                }
+            }
             else
             {
                 textureDict = new Dictionary<int, Texture2D>();
-                for(var i=0; i < explicitTileCount; i++)
+                normalTextureDict = new Dictionary<int, Texture2D>();
+                for (var i=0; i < explicitTileCount; i++)
                 {
                     var tileTexture = reader.ReadExternalReference<Texture2D>();
                     textureDict.Add(i, tileTexture);
-                }
-            }
 
-            var normalTextureFlag = reader.ReadBoolean();
-            if (normalTextureFlag)
-            {
-               normalTexture = reader.ReadExternalReference<Texture2D>();
+                    var hasNormalTile = reader.ReadBoolean();
+                    if (hasNormalTile)
+                    {
+                        var tileNormalTexture = reader.ReadExternalReference<Texture2D>();
+                        normalTextureDict.Add(i, tileNormalTexture);
+                    }
+                    else
+                        normalTextureDict.Add(i, null);
+                }
             }
 
             ITileset tileset;
@@ -51,7 +62,7 @@ namespace MonoGame.Extended.Tiled
                 tileset = new TiledMapTileset(texture, normalTexture, tileWidth, tileHeight, tileCount, spacing, margin, columns);
             else
             {
-                tileset = new TiledMapCollectionTileset(textureDict, "test", tileWidth, tileHeight, tileCount, spacing, margin, columns);
+                tileset = new TiledMapCollectionTileset(textureDict, normalTextureDict, "test", tileWidth, tileHeight, tileCount, spacing, margin, columns);
             }
                 
 

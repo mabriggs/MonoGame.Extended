@@ -62,6 +62,25 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                         tile.Image.Source = Path.Combine(Path.GetDirectoryName(filePath), tile.Image.Source);
                         ContentLogger.Log($"Adding dependency '{tile.Image.Source}'");
                         context.AddDependency(tile.Image.Source);
+
+                        var normalImagePath = Path.Combine(Path.GetDirectoryName(tile.Image.Source), "normal", Path.GetFileName(tile.Image.Source));
+                        if (File.Exists(normalImagePath))
+                        {
+                            tile.NormalImage = new TiledMapImageContent()
+                            {
+                                Width = tile.Image.Width,
+                                Height = tile.Image.Height,
+                                Format = tile.Image.Format,
+                                Source = normalImagePath
+                            };
+                            ContentLogger.Log($"Adding dependency '{tile.NormalImage.Source}'");
+                            context.AddDependency(tile.NormalImage.Source);
+                        }
+                        else
+                        {
+                            tile.NormalImage = null;
+                        }
+
                     }
 
 				    foreach (var obj in tile.Objects)

@@ -43,6 +43,8 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                     {
                         // TODO: what about transparent colour? no entry added to dict above
                         contentItem.BuildExternalReference<Texture2DContent>(context, tile.Image.Source, parameters);
+                        if (tile.NormalImage != null)
+                            contentItem.BuildExternalReference<Texture2DContent>(context, tile.NormalImage.Source, parameters);
                     }
 				    foreach (var obj in tile.Objects)
 				    {
