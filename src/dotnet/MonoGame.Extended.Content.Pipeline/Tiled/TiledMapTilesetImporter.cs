@@ -57,30 +57,15 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                     
 				foreach (var tile in tileset.Tiles)
 				{
-                    if(tile.Image != null)
+                    
+                    if (tile.Image != null)
                     {
                         tile.Image.Source = Path.Combine(Path.GetDirectoryName(filePath), tile.Image.Source);
                         ContentLogger.Log($"Adding dependency '{tile.Image.Source}'");
                         context.AddDependency(tile.Image.Source);
 
-                        var normalImagePath = Path.Combine(Path.GetDirectoryName(tile.Image.Source), "normal", Path.GetFileName(tile.Image.Source));
-                        if (File.Exists(normalImagePath))
-                        {
-                            tile.NormalImage = new TiledMapImageContent()
-                            {
-                                Width = tile.Image.Width,
-                                Height = tile.Image.Height,
-                                Format = tile.Image.Format,
-                                Source = normalImagePath
-                            };
-                            ContentLogger.Log($"Adding dependency '{tile.NormalImage.Source}'");
-                            context.AddDependency(tile.NormalImage.Source);
-                        }
-                        else
-                        {
-                            tile.NormalImage = null;
-                        }
-
+                        tile.NormalImage = AddTiledMapImageType("normal", tile.Image, context);
+                        tile.HeightMapImage = AddTiledMapImageType("heightmap", tile.Image, context);
                     }
 
 				    foreach (var obj in tile.Objects)
@@ -99,5 +84,29 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 			    return tileset;
 			}
 		}
+
+        private static TiledMapImageContent AddTiledMapImageType(string subDirName, TiledMapImageContent image,
+            ContentImporterContext context)
+        {
+            var addedImagePath = Path.Combine(Path.GetDirectoryName(image.Source), subDirName, Path.GetFileName(image.Source));
+            if (File.Exists(addedImagePath))
+            {
+                var addedImage = new TiledMapImageContent()
+                {
+                    Width = image.Width,
+                    Height = image.Height,
+                    Format = image.Format,
+                    Source = addedImagePath
+                };
+                ContentLogger.Log($"Adding dependency '{addedImage.Source}'");
+                context.AddDependency(addedImage.Source);
+
+                return addedImage;
+            }
+            else
+            {
+                return null;
+            }
+        }
 	}
 }

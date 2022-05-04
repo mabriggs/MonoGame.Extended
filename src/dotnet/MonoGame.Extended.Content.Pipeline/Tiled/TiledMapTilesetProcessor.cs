@@ -45,6 +45,8 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                         contentItem.BuildExternalReference<Texture2DContent>(context, tile.Image.Source, parameters);
                         if (tile.NormalImage != null)
                             contentItem.BuildExternalReference<Texture2DContent>(context, tile.NormalImage.Source, parameters);
+                        if (tile.HeightMapImage != null)
+                            contentItem.BuildExternalReference<Texture2DContent>(context, tile.HeightMapImage.Source, parameters);
                     }
 				    foreach (var obj in tile.Objects)
 				    {

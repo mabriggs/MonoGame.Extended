@@ -23,6 +23,9 @@ namespace MonoGame.Extended.Tiled.Serialization
         [XmlIgnore]
         public TiledMapImageContent NormalImage { get; set; }
 
+        [XmlIgnore]
+        public TiledMapImageContent HeightMapImage { get; set; }
+
         [XmlArray("objectgroup")]
         [XmlArrayItem("object")]
         public List<TiledMapObjectContent> Objects { get; set; }

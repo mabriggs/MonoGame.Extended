@@ -19,7 +19,7 @@ namespace MonoGame.Extended.Tiled
 		public static ITileset ReadTileset(ContentReader reader)
 		{
             Texture2D texture = null, normalTexture = null;
-            Dictionary<int, Texture2D> textureDict = null, normalTextureDict = null;
+            Dictionary<int, Texture2D> textureDict = null, normalTextureDict = null, heightMapTextureDict = null;
             var tilesetImageFlag = reader.ReadBoolean();
             var tileWidth = reader.ReadInt32();
             var tileHeight = reader.ReadInt32();
@@ -41,6 +41,7 @@ namespace MonoGame.Extended.Tiled
             {
                 textureDict = new Dictionary<int, Texture2D>();
                 normalTextureDict = new Dictionary<int, Texture2D>();
+                heightMapTextureDict = new Dictionary<int, Texture2D>();
                 for (var i=0; i < explicitTileCount; i++)
                 {
                     var tileTexture = reader.ReadExternalReference<Texture2D>();
@@ -54,6 +55,15 @@ namespace MonoGame.Extended.Tiled
                     }
                     else
                         normalTextureDict.Add(i, null);
+
+                    var hasHeightMapTile = reader.ReadBoolean();
+                    if(hasHeightMapTile)
+                    {
+                        var heightMapTexture = reader.ReadExternalReference<Texture2D>();
+                        heightMapTextureDict.Add(i, heightMapTexture);
+                    }
+                    else
+                        heightMapTextureDict.Add(i, null);
                 }
             }
 
@@ -62,7 +72,7 @@ namespace MonoGame.Extended.Tiled
                 tileset = new TiledMapTileset(texture, normalTexture, tileWidth, tileHeight, tileCount, spacing, margin, columns);
             else
             {
-                tileset = new TiledMapCollectionTileset(textureDict, normalTextureDict, "test", tileWidth, tileHeight, tileCount, spacing, margin, columns);
+                tileset = new TiledMapCollectionTileset(textureDict, normalTextureDict, heightMapTextureDict, "test", tileWidth, tileHeight, tileCount, spacing, margin, columns);
             }
                 
 

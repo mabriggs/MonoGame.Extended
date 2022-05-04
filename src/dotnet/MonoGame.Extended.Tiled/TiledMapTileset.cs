@@ -24,19 +24,24 @@ namespace MonoGame.Extended.Tiled
         TiledMapProperties Properties { get; }
         Texture2D GetTileTexture(int localId);
         Texture2D GetTileNormalTexture(int localId);
+        Texture2D GetTileHeightMapTexture(int localId);
         TextureRegion2D GetRegion(int column, int row);
     }
 
     public class TiledMapCollectionTileset : ITileset
     {
         private Dictionary<int, Texture2D> _texureDict;
-        private Dictionary<int, Texture2D> _normalTexureDict;
+        private Dictionary<int, Texture2D> _normalTexureDict, _heightMapTextureDict;
 
-        public TiledMapCollectionTileset(Dictionary<int, Texture2D> textureDict, Dictionary<int, Texture2D> normalTexureDict, string name,
+        public TiledMapCollectionTileset(Dictionary<int, Texture2D> textureDict,
+            Dictionary<int, Texture2D> normalTexureDict,
+            Dictionary<int, Texture2D> heightMapTexureDict,
+            string name,
             int tileWidth, int tileHeight, int tileCount, int spacing, int margin, int columns)
         {
             _texureDict = textureDict;
             _normalTexureDict = normalTexureDict;
+            _heightMapTextureDict = heightMapTexureDict;
             Name = name;
             TileWidth = tileWidth;
             TileHeight = tileHeight;
@@ -86,6 +91,11 @@ namespace MonoGame.Extended.Tiled
         public Texture2D GetTileNormalTexture(int localId)
         {
             return _normalTexureDict[localId];
+        }
+
+        public Texture2D GetTileHeightMapTexture(int localId)
+        {
+            return _heightMapTextureDict[localId];
         }
     }
 
@@ -141,6 +151,11 @@ namespace MonoGame.Extended.Tiled
         }
 
         public Texture2D GetTileNormalTexture(int localId)
+        {
+            throw new NotSupportedException();
+        }
+
+        public Texture2D GetTileHeightMapTexture(int localId)
         {
             throw new NotSupportedException();
         }

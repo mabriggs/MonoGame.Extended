@@ -54,12 +54,8 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                     var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(tilesetTile.Image.Source);
                     writer.WriteExternalReference(externalReference);
 
-                    writer.Write(tilesetTile.NormalImage != null);
-                    if(tilesetTile.NormalImage != null)
-                    {
-                        externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(tilesetTile.NormalImage.Source);
-                        writer.WriteExternalReference(externalReference);
-                    }
+                    WriteExtraImage(writer, tileset, externalReferenceRepository, tilesetTile.NormalImage);
+                    WriteExtraImage(writer, tileset, externalReferenceRepository, tilesetTile.HeightMapImage);
                 }
             }
 
@@ -170,6 +166,17 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                 return TiledMapObjectType.Polyline;
 
             return TiledMapObjectType.Rectangle;
+        }
+
+        public static void WriteExtraImage(ContentWriter writer, TiledMapTilesetContent tileset,
+            IExternalReferenceRepository externalReferenceRepository, TiledMapImageContent image)
+        {
+            writer.Write(image != null);
+            if (image != null)
+            {
+                var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(image.Source);
+                writer.WriteExternalReference(externalReference);
+            }
         }
 	}
 }
