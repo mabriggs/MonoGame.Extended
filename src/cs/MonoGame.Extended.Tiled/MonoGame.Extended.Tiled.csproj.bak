@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -21,11 +21,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
+    <ProjectReference Include="..\MonoGame.Extended.Graphics\MonoGame.Extended.Graphics.csproj" />
+    <ProjectReference Include="..\MonoGame.Extended\MonoGame.Extended.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MonoGame.Extended.Graphics\MonoGame.Extended.Graphics.csproj" />
-    <ProjectReference Include="..\MonoGame.Extended\MonoGame.Extended.csproj" />
+<<<<<<< HEAD
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
+=======
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+>>>>>>> origin/develop
   </ItemGroup>
 </Project>
