@@ -1,0 +1,378 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28CD24BD-432C-4987-9E9D-65CFCF120EA0}|src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.content.pipeline\\monogame.extended.content.pipeline.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{28CD24BD-432C-4987-9E9D-65CFCF120EA0}|src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj|solutionrelative:src\\cs\\monogame.extended.content.pipeline\\monogame.extended.content.pipeline.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34841DEB-EEC0-477C-B19D-CBB6DF49ED39}|src\\cs\\Tests\\MonoGame.Extended.Tiled.Tests\\MonoGame.Extended.Tiled.Tests.csproj|c:\\users\\sbriggs\\documents\\mark\\monogame.extended\\src\\cs\\tests\\monogame.extended.tiled.tests\\monogame.extended.tiled.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{34841DEB-EEC0-477C-B19D-CBB6DF49ED39}|src\\cs\\Tests\\MonoGame.Extended.Tiled.Tests\\MonoGame.Extended.Tiled.Tests.csproj|solutionrelative:src\\cs\\tests\\monogame.extended.tiled.tests\\monogame.extended.tiled.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54F8F82-7B7D-4C96-B22D-D4B2F5C2E9F6}|src\\cs\\Tests\\MonoGame.Extended.Tests\\MonoGame.Extended.Tests.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\tests\\monogame.extended.tests\\monogame.extended.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F54F8F82-7B7D-4C96-B22D-D4B2F5C2E9F6}|src\\cs\\Tests\\MonoGame.Extended.Tests\\MonoGame.Extended.Tests.csproj|solutionrelative:src\\cs\\tests\\monogame.extended.tests\\monogame.extended.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43CBA868-9BFC-4E02-8A7A-142C603B087E}|src\\cs\\Tests\\MonoGame.Extended.Gui.Tests\\MonoGame.Extended.Gui.Tests.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\tests\\monogame.extended.gui.tests\\monogame.extended.gui.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{43CBA868-9BFC-4E02-8A7A-142C603B087E}|src\\cs\\Tests\\MonoGame.Extended.Gui.Tests\\MonoGame.Extended.Gui.Tests.csproj|solutionrelative:src\\cs\\tests\\monogame.extended.gui.tests\\monogame.extended.gui.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F39A4B4A-F5DE-4996-86A4-949B91E5604A}|src\\cs\\Tests\\MonoGame.Extended.Entities.Tests\\MonoGame.Extended.Entities.Tests.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\tests\\monogame.extended.entities.tests\\monogame.extended.entities.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F39A4B4A-F5DE-4996-86A4-949B91E5604A}|src\\cs\\Tests\\MonoGame.Extended.Entities.Tests\\MonoGame.Extended.Entities.Tests.csproj|solutionrelative:src\\cs\\tests\\monogame.extended.entities.tests\\monogame.extended.entities.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A10414F-D3A1-4088-B056-5C9DD387C153}|src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests.Tiled\\MonoGame.Extended.Content.Pipeline.Tests.Tiled.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\tests\\monogame.extended.content.pipeline.tests.tiled\\monogame.extended.content.pipeline.tests.tiled.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2A10414F-D3A1-4088-B056-5C9DD387C153}|src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests.Tiled\\MonoGame.Extended.Content.Pipeline.Tests.Tiled.csproj|solutionrelative:src\\cs\\tests\\monogame.extended.content.pipeline.tests.tiled\\monogame.extended.content.pipeline.tests.tiled.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65D54A69-65AE-4DAB-A1EB-EC7AAEF1FEB1}|src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests\\MonoGame.Extended.Content.Pipeline.Tests.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\tests\\monogame.extended.content.pipeline.tests\\monogame.extended.content.pipeline.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{65D54A69-65AE-4DAB-A1EB-EC7AAEF1FEB1}|src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests\\MonoGame.Extended.Content.Pipeline.Tests.csproj|solutionrelative:src\\cs\\tests\\monogame.extended.content.pipeline.tests\\monogame.extended.content.pipeline.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB439E84-F0F6-4790-8CD1-8A66C3D7B4DA}|src\\cs\\Tests\\MonoGame.Extended.Collisions.Tests\\MonoGame.Extended.Collisions.Tests.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\tests\\monogame.extended.collisions.tests\\monogame.extended.collisions.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CB439E84-F0F6-4790-8CD1-8A66C3D7B4DA}|src\\cs\\Tests\\MonoGame.Extended.Collisions.Tests\\MonoGame.Extended.Collisions.Tests.csproj|solutionrelative:src\\cs\\tests\\monogame.extended.collisions.tests\\monogame.extended.collisions.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28CD24BD-432C-4987-9E9D-65CFCF120EA0}|src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.content.pipeline\\monogame.extended.content.pipeline.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}",
+      "RelativeMoniker": "D:0:0:{28CD24BD-432C-4987-9E9D-65CFCF120EA0}|src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj|solutionrelative:src\\cs\\monogame.extended.content.pipeline\\monogame.extended.content.pipeline.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02562C6F-5BFB-467E-8A95-68B6CE2D635A}|src\\cs\\MonoGame.Extended.Collisions\\MonoGame.Extended.Collisions.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.collisions\\monogame.extended.collisions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{02562C6F-5BFB-467E-8A95-68B6CE2D635A}|src\\cs\\MonoGame.Extended.Collisions\\MonoGame.Extended.Collisions.csproj|solutionrelative:src\\cs\\monogame.extended.collisions\\monogame.extended.collisions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF61F4F-A2EE-49BF-95D0-379E870DE90E}|src\\cs\\MonoGame.Extended.Tweening\\MonoGame.Extended.Tweening.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.tweening\\monogame.extended.tweening.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1CF61F4F-A2EE-49BF-95D0-379E870DE90E}|src\\cs\\MonoGame.Extended.Tweening\\MonoGame.Extended.Tweening.csproj|solutionrelative:src\\cs\\monogame.extended.tweening\\monogame.extended.tweening.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07B2ADE2-73E3-41C4-AEA1-D5566A5AB902}|src\\cs\\MonoGame.Extended.Tiled\\MonoGame.Extended.Tiled.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.tiled\\monogame.extended.tiled.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{07B2ADE2-73E3-41C4-AEA1-D5566A5AB902}|src\\cs\\MonoGame.Extended.Tiled\\MonoGame.Extended.Tiled.csproj|solutionrelative:src\\cs\\monogame.extended.tiled\\monogame.extended.tiled.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C8B9E29-D09B-4901-80FD-45AAA35882C6}|src\\cs\\MonoGame.Extended.Particles\\MonoGame.Extended.Particles.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.particles\\monogame.extended.particles.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6C8B9E29-D09B-4901-80FD-45AAA35882C6}|src\\cs\\MonoGame.Extended.Particles\\MonoGame.Extended.Particles.csproj|solutionrelative:src\\cs\\monogame.extended.particles\\monogame.extended.particles.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C87598-994C-49B5-BBB3-7FFC342635D3}|src\\cs\\MonoGame.Extended.Input\\MonoGame.Extended.Input.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.input\\monogame.extended.input.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{49C87598-994C-49B5-BBB3-7FFC342635D3}|src\\cs\\MonoGame.Extended.Input\\MonoGame.Extended.Input.csproj|solutionrelative:src\\cs\\monogame.extended.input\\monogame.extended.input.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E425575-378A-4F83-88C9-F8BEBAD227C9}|src\\cs\\MonoGame.Extended.Gui\\MonoGame.Extended.Gui.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.gui\\monogame.extended.gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8E425575-378A-4F83-88C9-F8BEBAD227C9}|src\\cs\\MonoGame.Extended.Gui\\MonoGame.Extended.Gui.csproj|solutionrelative:src\\cs\\monogame.extended.gui\\monogame.extended.gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B3AB8A1-78AA-471A-AFD0-B10B932115BC}|src\\cs\\MonoGame.Extended.Graphics\\MonoGame.Extended.Graphics.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.graphics\\monogame.extended.graphics.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9B3AB8A1-78AA-471A-AFD0-B10B932115BC}|src\\cs\\MonoGame.Extended.Graphics\\MonoGame.Extended.Graphics.csproj|solutionrelative:src\\cs\\monogame.extended.graphics\\monogame.extended.graphics.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD1F05-AF04-469A-B37A-F9B36C34401C}|src\\cs\\MonoGame.Extended.Entities\\MonoGame.Extended.Entities.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended.entities\\monogame.extended.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{35FD1F05-AF04-469A-B37A-F9B36C34401C}|src\\cs\\MonoGame.Extended.Entities\\MonoGame.Extended.Entities.csproj|solutionrelative:src\\cs\\monogame.extended.entities\\monogame.extended.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4170BBC0-BF49-4307-8272-768EEA77034A}|src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended\\monogame.extended.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4170BBC0-BF49-4307-8272-768EEA77034A}|src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj|solutionrelative:src\\cs\\monogame.extended\\monogame.extended.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4170BBC0-BF49-4307-8272-768EEA77034A}|src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended\\monogame.extended.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}",
+      "RelativeMoniker": "D:0:0:{4170BBC0-BF49-4307-8272-768EEA77034A}|src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj|solutionrelative:src\\cs\\monogame.extended\\monogame.extended.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4170BBC0-BF49-4307-8272-768EEA77034A}|src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj|C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\monogame.extended\\animationcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4170BBC0-BF49-4307-8272-768EEA77034A}|src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj|solutionrelative:src\\cs\\monogame.extended\\animationcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MonoGame.Extended.Tiled.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Tiled.Tests\\MonoGame.Extended.Tiled.Tests.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\Tests\\MonoGame.Extended.Tiled.Tests\\MonoGame.Extended.Tiled.Tests.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Tiled.Tests\\MonoGame.Extended.Tiled.Tests.csproj",
+              "RelativeToolTip": "src\\cs\\Tests\\MonoGame.Extended.Tiled.Tests\\MonoGame.Extended.Tiled.Tests.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:51.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MonoGame.Extended.Content.Pipeline.Tests.Tiled.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests.Tiled\\MonoGame.Extended.Content.Pipeline.Tests.Tiled.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests.Tiled\\MonoGame.Extended.Content.Pipeline.Tests.Tiled.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests.Tiled\\MonoGame.Extended.Content.Pipeline.Tests.Tiled.csproj",
+              "RelativeToolTip": "src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests.Tiled\\MonoGame.Extended.Content.Pipeline.Tests.Tiled.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:51.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MonoGame.Extended.Content.Pipeline.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests\\MonoGame.Extended.Content.Pipeline.Tests.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests\\MonoGame.Extended.Content.Pipeline.Tests.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests\\MonoGame.Extended.Content.Pipeline.Tests.csproj",
+              "RelativeToolTip": "src\\cs\\Tests\\MonoGame.Extended.Content.Pipeline.Tests\\MonoGame.Extended.Content.Pipeline.Tests.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:51.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MonoGame.Extended.Content.Pipeline.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACIAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MonoGame.Extended.Entities.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Entities.Tests\\MonoGame.Extended.Entities.Tests.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\Tests\\MonoGame.Extended.Entities.Tests\\MonoGame.Extended.Entities.Tests.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Entities.Tests\\MonoGame.Extended.Entities.Tests.csproj",
+              "RelativeToolTip": "src\\cs\\Tests\\MonoGame.Extended.Entities.Tests\\MonoGame.Extended.Entities.Tests.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:51.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MonoGame.Extended.Collisions.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Collisions.Tests\\MonoGame.Extended.Collisions.Tests.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\Tests\\MonoGame.Extended.Collisions.Tests\\MonoGame.Extended.Collisions.Tests.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Collisions.Tests\\MonoGame.Extended.Collisions.Tests.csproj",
+              "RelativeToolTip": "src\\cs\\Tests\\MonoGame.Extended.Collisions.Tests\\MonoGame.Extended.Collisions.Tests.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MonoGame.Extended.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Tests\\MonoGame.Extended.Tests.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\Tests\\MonoGame.Extended.Tests\\MonoGame.Extended.Tests.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Tests\\MonoGame.Extended.Tests.csproj",
+              "RelativeToolTip": "src\\cs\\Tests\\MonoGame.Extended.Tests\\MonoGame.Extended.Tests.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:51.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MonoGame.Extended.Gui.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Gui.Tests\\MonoGame.Extended.Gui.Tests.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\Tests\\MonoGame.Extended.Gui.Tests\\MonoGame.Extended.Gui.Tests.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\Tests\\MonoGame.Extended.Gui.Tests\\MonoGame.Extended.Gui.Tests.csproj",
+              "RelativeToolTip": "src\\cs\\Tests\\MonoGame.Extended.Gui.Tests\\MonoGame.Extended.Gui.Tests.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MonoGame.Extended.Content.Pipeline",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Content.Pipeline\\MonoGame.Extended.Content.Pipeline.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MonoGame.Extended.Tweening.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Tweening\\MonoGame.Extended.Tweening.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Tweening\\MonoGame.Extended.Tweening.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Tweening\\MonoGame.Extended.Tweening.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Tweening\\MonoGame.Extended.Tweening.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MonoGame.Extended.Tiled.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Tiled\\MonoGame.Extended.Tiled.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Tiled\\MonoGame.Extended.Tiled.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Tiled\\MonoGame.Extended.Tiled.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Tiled\\MonoGame.Extended.Tiled.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MonoGame.Extended.Particles.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Particles\\MonoGame.Extended.Particles.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Particles\\MonoGame.Extended.Particles.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Particles\\MonoGame.Extended.Particles.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Particles\\MonoGame.Extended.Particles.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MonoGame.Extended.Input.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Input\\MonoGame.Extended.Input.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Input\\MonoGame.Extended.Input.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Input\\MonoGame.Extended.Input.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Input\\MonoGame.Extended.Input.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MonoGame.Extended.Gui.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Gui\\MonoGame.Extended.Gui.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Gui\\MonoGame.Extended.Gui.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Gui\\MonoGame.Extended.Gui.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Gui\\MonoGame.Extended.Gui.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MonoGame.Extended.Collisions.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Collisions\\MonoGame.Extended.Collisions.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Collisions\\MonoGame.Extended.Collisions.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Collisions\\MonoGame.Extended.Collisions.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Collisions\\MonoGame.Extended.Collisions.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MonoGame.Extended.Graphics.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Graphics\\MonoGame.Extended.Graphics.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Graphics\\MonoGame.Extended.Graphics.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Graphics\\MonoGame.Extended.Graphics.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Graphics\\MonoGame.Extended.Graphics.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MonoGame.Extended.Entities.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Entities\\MonoGame.Extended.Entities.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended.Entities\\MonoGame.Extended.Entities.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended.Entities\\MonoGame.Extended.Entities.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended.Entities\\MonoGame.Extended.Entities.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MonoGame.Extended.csproj",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MonoGame.Extended",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended\\MonoGame.Extended.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-19T04:32:52.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AnimationComponent.cs",
+              "DocumentMoniker": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended\\AnimationComponent.cs",
+              "RelativeDocumentMoniker": "src\\cs\\MonoGame.Extended\\AnimationComponent.cs",
+              "ToolTip": "C:\\Users\\sbriggs\\Documents\\Mark\\MonoGame.Extended\\src\\cs\\MonoGame.Extended\\AnimationComponent.cs",
+              "RelativeToolTip": "src\\cs\\MonoGame.Extended\\AnimationComponent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T04:32:52.282Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
