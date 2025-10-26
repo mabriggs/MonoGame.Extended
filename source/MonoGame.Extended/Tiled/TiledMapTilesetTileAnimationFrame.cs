@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Copyright (c) Craftwork Games. All rights reserved.
+// Licensed under the MIT license.
+// See LICENSE file in the project root for full license information.
+
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
@@ -11,7 +15,7 @@ namespace MonoGame.Extended.Tiled
         public readonly Vector2[] TextureCoordinates;
         private readonly Dictionary<TiledMapTileFlipFlags, Vector2[]> _flipDictionary = new Dictionary<TiledMapTileFlipFlags, Vector2[]>();
 
-        internal TiledMapTilesetTileAnimationFrame(TiledMapTileset tileset, int localTileIdentifier, int durationInMilliseconds)
+        internal TiledMapTilesetTileAnimationFrame(ITileset tileset, int localTileIdentifier, int durationInMilliseconds)
         {
             LocalTileIdentifier = localTileIdentifier;
             Duration = new TimeSpan(0, 0, 0, 0, durationInMilliseconds);
@@ -31,7 +35,7 @@ namespace MonoGame.Extended.Tiled
             }
         }
 
-        public void CreateTextureRotations(TiledMapTileset tileset, TiledMapTileFlipFlags flipFlags)
+        public void CreateTextureRotations(ITileset tileset, TiledMapTileFlipFlags flipFlags)
         {
             if (!_flipDictionary.ContainsKey(flipFlags))
             {
@@ -46,7 +50,7 @@ namespace MonoGame.Extended.Tiled
             }
         }
 
-        public Vector2[] TransformTextureCoordinates(TiledMapTileset tileset, TiledMapTileFlipFlags flipFlags)
+        public Vector2[] TransformTextureCoordinates(ITileset tileset, TiledMapTileFlipFlags flipFlags)
         {
             var sourceRectangle = tileset.GetTileRegion(LocalTileIdentifier);
             var texture = tileset.Texture;
@@ -114,7 +118,7 @@ namespace MonoGame.Extended.Tiled
             return transform;
         }
 
-        private void CreateTextureCoordinates(TiledMapTileset tileset)
+        private void CreateTextureCoordinates(ITileset tileset)
         {
             var sourceRectangle = tileset.GetTileRegion(LocalTileIdentifier);
             var texture = tileset.Texture;

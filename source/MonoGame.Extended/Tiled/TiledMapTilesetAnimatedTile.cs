@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Copyright (c) Craftwork Games. All rights reserved.
+// Licensed under the MIT license.
+// See LICENSE file in the project root for full license information.
+
+using System;
 using System.Collections.ObjectModel;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -23,7 +27,7 @@ namespace MonoGame.Extended.Tiled
             CurrentAnimationFrame = AnimationFrames[0];
         }
 
-        public void CreateTextureRotations(TiledMapTileset tileset, TiledMapTileFlipFlags flipFlags)
+        public void CreateTextureRotations(ITileset tileset, TiledMapTileFlipFlags flipFlags)
         {
             for (int i = 0; i < AnimationFrames.Count; i++)
             {

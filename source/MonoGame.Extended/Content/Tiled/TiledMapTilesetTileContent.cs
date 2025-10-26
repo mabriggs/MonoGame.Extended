@@ -24,6 +24,12 @@ public class TiledMapTilesetTileContent
     [XmlElement(ElementName = "image")]
     public TiledMapImageContent Image { get; set; }
 
+    [XmlElement(ElementName = "normalimage")]
+    public TiledMapImageContent NormalImage { get; set; }
+
+    [XmlElement(ElementName = "heightmapimage")]
+    public TiledMapImageContent HeightMapImage { get; set; }
+
     [XmlArray("objectgroup")]
     [XmlArrayItem("object")]
     public List<TiledMapObjectContent> Objects { get; set; }
@@ -35,7 +41,7 @@ public class TiledMapTilesetTileContent
     [XmlArray("properties")]
     [XmlArrayItem("property")]
     public List<TiledMapPropertyContent> Properties { get; set; }
-    
+
     public override string ToString()
     {
         return LocalIdentifier.ToString();

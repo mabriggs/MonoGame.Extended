@@ -1,3 +1,7 @@
+// Copyright (c) Craftwork Games. All rights reserved.
+// Licensed under the MIT license.
+// See LICENSE file in the project root for full license information.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,39 +47,34 @@ namespace MonoGame.Extended.Tiled
 
             for (var i = 0; i < tilesetCount; i++)
             {
-				var firstGlobalIdentifier = reader.ReadInt32();
+                var firstGlobalIdentifier = reader.ReadInt32();
                 var tileset = ReadTileset(reader, map);
                 map.AddTileset(tileset, firstGlobalIdentifier);
             }
         }
-<<<<<<< HEAD:src/cs/MonoGame.Extended.Tiled/TiledMapReader.cs
-        
-        private static ITileset ReadTileset(ContentReader reader, TiledMap map)
-=======
 
-        private static TiledMapTileset ReadTileset(ContentReader reader, TiledMap map)
->>>>>>> origin_develop:source/MonoGame.Extended/Tiled/TiledMapReader.cs
+        private static ITileset ReadTileset(ContentReader reader, TiledMap map)
         {
             var external = reader.ReadBoolean();
-			var tileset = external ? reader.ReadExternalReference<ITileset>() : TiledMapTilesetReader.ReadTileset(reader);
+            var tileset = external ? reader.ReadExternalReference<ITileset>() : TiledMapTilesetReader.ReadTileset(reader);
 
-			return tileset;
+            return tileset;
         }
 
         private static void ReadLayers(ContentReader reader, TiledMap map)
-		{
-			foreach (var layer in ReadGroup(reader, map))
-				map.AddLayer(layer);
-		}
-		private static List<TiledMapLayer> ReadGroup(ContentReader reader, TiledMap map)
+        {
+            foreach (var layer in ReadGroup(reader, map))
+                map.AddLayer(layer);
+        }
+        private static List<TiledMapLayer> ReadGroup(ContentReader reader, TiledMap map)
         {
             var layerCount = reader.ReadInt32();
-			var value = new List<TiledMapLayer>(layerCount);
+            var value = new List<TiledMapLayer>(layerCount);
 
             for (var i = 0; i < layerCount; i++)
                 value.Add(ReadLayer(reader, map));
 
-			return value;
+            return value;
         }
 
         private static TiledMapLayer ReadLayer(ContentReader reader, TiledMap map)
@@ -108,9 +107,9 @@ namespace MonoGame.Extended.Tiled
                 case TiledMapLayerType.ObjectLayer:
                     layer = ReadObjectLayer(reader, name, type, offset, parallaxFactor, opacity, isVisible, map);
                     break;
-				case TiledMapLayerType.GroupLayer:
-					layer = new TiledMapGroupLayer(name, type, ReadGroup(reader, map), offset, parallaxFactor, opacity, isVisible);
-					break;
+                case TiledMapLayerType.GroupLayer:
+                    layer = new TiledMapGroupLayer(name, type, ReadGroup(reader, map), offset, parallaxFactor, opacity, isVisible);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

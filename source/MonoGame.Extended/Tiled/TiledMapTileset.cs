@@ -1,3 +1,7 @@
+// Copyright (c) Craftwork Games. All rights reserved.
+// Licensed under the MIT license.
+// See LICENSE file in the project root for full license information.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,17 +24,14 @@ namespace MonoGame.Extended.Tiled
         int Margin { get; }
         bool HasSharedTexture { get; }
         Texture2D Texture { get; }
-<<<<<<< HEAD:src/cs/MonoGame.Extended.Tiled/TiledMapTileset.cs
         Texture2D NormalTexture { get; }
         List<TiledMapTilesetTile> Tiles { get; }
         TiledMapProperties Properties { get; }
         Texture2D GetTileTexture(int localId);
         Texture2D GetTileNormalTexture(int localId);
         Texture2D GetTileHeightMapTexture(int localId);
-        TextureRegion2D GetRegion(int column, int row);
-=======
         Texture2DRegion GetRegion(int column, int row);
->>>>>>> origin_develop:source/MonoGame.Extended/Tiled/TiledMapTileset.cs
+        Rectangle GetTileRegion(int localTileIdentifier);
     }
 
     public class TiledMapCollectionTileset : ITileset
@@ -62,7 +63,7 @@ namespace MonoGame.Extended.Tiled
         public Texture2D Texture => throw new NotImplementedException();
         public Texture2D NormalTexture => throw new NotImplementedException();
 
-        public TextureRegion2D GetRegion(int column, int row)
+        public Texture2DRegion GetRegion(int column, int row)
         {
             throw new NotImplementedException();
             //var x = Margin + column * (TileWidth + Spacing);
@@ -106,18 +107,12 @@ namespace MonoGame.Extended.Tiled
 
     public class TiledMapTileset : ITileset
     {
-<<<<<<< HEAD:src/cs/MonoGame.Extended.Tiled/TiledMapTileset.cs
-        public TiledMapTileset(Texture2D texture, Texture2D normalTexture,
+        public TiledMapTileset(Texture2D texture, Texture2D normalTexture, string type,
             int tileWidth, int tileHeight, int tileCount, int spacing, int margin, int columns)
         {
             Texture = texture;
             NormalTexture = normalTexture;
-=======
-        public TiledMapTileset(Texture2D texture, string type, int tileWidth, int tileHeight, int tileCount, int spacing, int margin, int columns)
-        {
-            Texture = texture;
             Type = type;
->>>>>>> origin_develop:source/MonoGame.Extended/Tiled/TiledMapTileset.cs
             TileWidth = tileWidth;
             TileHeight = tileHeight;
             TileCount = tileCount;
@@ -149,7 +144,7 @@ namespace MonoGame.Extended.Tiled
         public List<TiledMapTilesetTile> Tiles { get; }
         public TiledMapProperties Properties { get; }
 
-        public int Rows => (int)Math.Ceiling((double) TileCount / Columns);
+        public int Rows => (int)Math.Ceiling((double)TileCount / Columns);
         public int ActualWidth => TileWidth * Columns;
         public int ActualHeight => TileHeight * Rows;
         public bool HasSharedTexture => true;

@@ -1,59 +1,56 @@
-﻿using System;
+﻿// Copyright (c) Craftwork Games. All rights reserved.
+// Licensed under the MIT license.
+// See LICENSE file in the project root for full license information.
+
+using System;
 using System.Globalization;
+using System.Linq;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
-<<<<<<< HEAD:src/cs/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
-using MonoGame.Extended.Tiled.Serialization;
-using System.Linq;
-=======
 using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
 using MonoGame.Extended.Content.Tiled;
 using MonoGame.Extended.Tiled;
->>>>>>> origin_develop:source/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
 
 namespace MonoGame.Extended.Content.Pipeline.Tiled
 {
     [ContentTypeWriter]
-	public class TiledMapTilesetWriter : ContentTypeWriter<TiledMapTilesetContentItem>
-	{
-<<<<<<< HEAD:src/cs/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
+    public class TiledMapTilesetWriter : ContentTypeWriter<TiledMapTilesetContentItem>
+    {
         public const string NormalTilesetPropertyName = "normal";
 
-		public override string GetRuntimeReader(TargetPlatform targetPlatform) => "MonoGame.Extended.Tiled.TiledMapTilesetReader, MonoGame.Extended.Tiled";
-=======
-		public override string GetRuntimeReader(TargetPlatform targetPlatform)
+        public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
             return typeof(TiledMapTilesetReader).AssemblyQualifiedName;
         }
->>>>>>> origin_develop:source/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
 
-	    public override string GetRuntimeType(TargetPlatform targetPlatform)
+        public override string GetRuntimeType(TargetPlatform targetPlatform)
         {
             return typeof(TiledMapTileset).AssemblyQualifiedName;
         }
 
-		protected override void Write(ContentWriter writer, TiledMapTilesetContentItem contentItem)
-		{
-			try
-			{
-				WriteTileset(writer, contentItem.Data, contentItem);
-			}
-			catch (Exception ex)
-			{
+        protected override void Write(ContentWriter writer, TiledMapTilesetContentItem contentItem)
+        {
+            try
+            {
+                WriteTileset(writer, contentItem.Data, contentItem);
+            }
+            catch (Exception ex)
+            {
                 ContentLogger.Logger.LogImportantMessage(ex.StackTrace);
                 throw;
-			}
-		}
+            }
+        }
 
-		public static void WriteTileset(ContentWriter writer, TiledMapTilesetContent tileset, IExternalReferenceRepository externalReferenceRepository)
-		{
-<<<<<<< HEAD:src/cs/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
+        public static void WriteTileset(ContentWriter writer, TiledMapTilesetContent tileset, IExternalReferenceRepository externalReferenceRepository)
+        {
+            //<<<<<<< HEAD:src/cs/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
             writer.Write(tileset.Image != null);
-=======
-		    var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(tileset.Image?.Source);
-			writer.WriteExternalReference(externalReference);
             writer.Write(tileset.Class ?? tileset.Type ?? string.Empty);
->>>>>>> origin_develop:source/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
+            //=======
+            //		    var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(tileset.Image?.Source);
+            //			writer.WriteExternalReference(externalReference);
+            //            writer.Write(tileset.Class ?? tileset.Type ?? string.Empty);
+            //>>>>>>> origin_develop:source/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
             writer.Write(tileset.TileWidth);
             writer.Write(tileset.TileHeight);
             writer.Write(tileset.TileCount);
@@ -83,9 +80,8 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                 WriteTilesetTile(writer, tilesetTile, externalReferenceRepository);
 
             writer.WriteTiledMapProperties(tileset.Properties);
-		}
+        }
 
-<<<<<<< HEAD:src/cs/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
         private static void WriteNormalImage(ContentWriter writer, TiledMapTilesetContent tileset, IExternalReferenceRepository externalReferenceRepository)
         {
             var normalTileset = tileset.Properties.FirstOrDefault(p => p.Name == NormalTilesetPropertyName);
@@ -98,11 +94,8 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
             }
         }
 
-        private static void WriteTilesetTile(ContentWriter writer, TiledMapTilesetTileContent tilesetTile)
-=======
         private static void WriteTilesetTile(ContentWriter writer, TiledMapTilesetTileContent tilesetTile,
             IExternalReferenceRepository externalReferenceRepository)
->>>>>>> origin_develop:source/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
         {
             var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(tilesetTile.Image?.Source);
             writer.WriteExternalReference(externalReference);
@@ -206,5 +199,5 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                 writer.WriteExternalReference(externalReference);
             }
         }
-	}
+    }
 }

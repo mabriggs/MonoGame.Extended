@@ -1,18 +1,17 @@
+// Copyright (c) Craftwork Games. All rights reserved.
+// Licensed under the MIT license.
+// See LICENSE file in the project root for full license information.
+
 using Microsoft.Xna.Framework;
 
 namespace MonoGame.Extended.Tiled
 {
     public sealed class TiledMapTileObject : TiledMapObject
     {
-<<<<<<< HEAD:src/cs/MonoGame.Extended.Tiled/TiledMapTileObject.cs
         public readonly uint GlobalTileIdentifierWithFlags;
 
-        public TiledMapTileObject(uint globalTileIdentifierWithFlags, int identifier, string name, ITileset tileset, TiledMapTilesetTile tile, 
-            Size2 size, Vector2 position, float rotation = 0, float opacity = 1, bool isVisible = true, string type = null) 
-=======
-        public TiledMapTileObject(int identifier, string name, TiledMapTileset tileset, TiledMapTilesetTile tile,
+        public TiledMapTileObject(uint globalTileIdentifierWithFlags, int identifier, string name, ITileset tileset, TiledMapTilesetTile tile,
             SizeF size, Vector2 position, float rotation = 0, float opacity = 1, bool isVisible = true, string type = null)
->>>>>>> origin_develop:source/MonoGame.Extended/Tiled/TiledMapTileObject.cs
             : base(identifier, name, size, position, rotation, opacity, isVisible, type)
         {
             GlobalTileIdentifierWithFlags = globalTileIdentifierWithFlags;
