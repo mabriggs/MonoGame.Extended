@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Copyright (c) Craftwork Games. All rights reserved.
+// Licensed under the MIT license.
+// See LICENSE file in the project root for full license information.
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
@@ -65,6 +69,13 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
                         tileset.Image.Source = getTilesetSource(tileset.Image.Source);
                         ContentLogger.Log($"Adding dependency for {tileset.Image.Source}");
                         context.AddDependency(tileset.Image.Source);
+                    }
+
+                    if (tileset.NormalSource != null)
+                    {
+                        tileset.NormalSource = getTilesetSource(tileset.NormalSource);
+                        ContentLogger.Log($"Adding dependency for {tileset.NormalSource}");
+                        context.AddDependency(tileset.NormalSource);
                     }
                 }
 

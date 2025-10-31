@@ -24,10 +24,10 @@ public class TiledMapTilesetTileContent
     [XmlElement(ElementName = "image")]
     public TiledMapImageContent Image { get; set; }
 
-    [XmlElement(ElementName = "normalimage")]
+    //[XmlElement(ElementName = "normalimage")]
     public TiledMapImageContent NormalImage { get; set; }
 
-    [XmlElement(ElementName = "heightmapimage")]
+    //[XmlElement(ElementName = "heightmapimage")]
     public TiledMapImageContent HeightMapImage { get; set; }
 
     [XmlArray("objectgroup")]

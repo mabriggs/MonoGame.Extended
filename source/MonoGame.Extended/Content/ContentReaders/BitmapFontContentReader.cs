@@ -57,7 +57,10 @@ public class BitmapFontContentReader : ContentTypeReader<BitmapFont>
 
             if (characters.TryGetValue((int)first, out var character))
             {
-                character.Kernings.Add((int)second, amount);
+                if (character.Kernings.ContainsKey((int)second))
+                    character.Kernings[(int)second] = amount;
+                else
+                    character.Kernings.Add((int)second, amount);
             }
         }
 

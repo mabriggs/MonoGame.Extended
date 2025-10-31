@@ -23,14 +23,9 @@ namespace MonoGame.Extended.Tiled
 
         public static ITileset ReadTileset(ContentReader reader)
         {
-            //<<<<<<< HEAD:src/cs/MonoGame.Extended.Tiled/TiledMapTilesetReader.cs
             Texture2D texture = null, normalTexture = null;
             Dictionary<int, Texture2D> textureDict = null, normalTextureDict = null, heightMapTextureDict = null;
             var tilesetImageFlag = reader.ReadBoolean();
-            //=======
-            //			var texture = reader.ReadExternalReference<Texture2D>();
-            //            var @class = reader.ReadString();
-            //>>>>>>> origin_develop:source/MonoGame.Extended/Tiled/TiledMapTilesetReader.cs
             var @class = reader.ReadString();
             var tileWidth = reader.ReadInt32();
             var tileHeight = reader.ReadInt32();

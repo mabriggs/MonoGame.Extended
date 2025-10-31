@@ -3,6 +3,7 @@
 // See LICENSE file in the project root for full license information.
 
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace MonoGame.Extended.Content.Tiled;
@@ -22,6 +23,14 @@ public class TiledMapTilesetContent
 
     [XmlAttribute(AttributeName = "source")]
     public string Source { get; set; }
+
+    private TiledMapPropertyContent NormalProp => Properties.FirstOrDefault(p => p.Name == "normal");
+    public string NormalSource
+    {
+        get => NormalProp?.Value;
+        set => NormalProp.ValueAttribute = value;
+    }
+
 
     [XmlAttribute(AttributeName = "name")]
     public string Name { get; set; }

@@ -4,7 +4,6 @@
 
 using System;
 using System.Globalization;
-using System.Linq;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
@@ -43,14 +42,8 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 
         public static void WriteTileset(ContentWriter writer, TiledMapTilesetContent tileset, IExternalReferenceRepository externalReferenceRepository)
         {
-            //<<<<<<< HEAD:src/cs/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
             writer.Write(tileset.Image != null);
             writer.Write(tileset.Class ?? tileset.Type ?? string.Empty);
-            //=======
-            //		    var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(tileset.Image?.Source);
-            //			writer.WriteExternalReference(externalReference);
-            //            writer.Write(tileset.Class ?? tileset.Type ?? string.Empty);
-            //>>>>>>> origin_develop:source/MonoGame.Extended.Content.Pipeline/Tiled/TiledMapTilesetWriter.cs
             writer.Write(tileset.TileWidth);
             writer.Write(tileset.TileHeight);
             writer.Write(tileset.TileCount);
@@ -84,12 +77,11 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
 
         private static void WriteNormalImage(ContentWriter writer, TiledMapTilesetContent tileset, IExternalReferenceRepository externalReferenceRepository)
         {
-            var normalTileset = tileset.Properties.FirstOrDefault(p => p.Name == NormalTilesetPropertyName);
+            var normalTileset = tileset.NormalSource; // tileset.Properties.FirstOrDefault(p => p.Name == NormalTilesetPropertyName);
             writer.Write(normalTileset != null);
             if (normalTileset != null)
             {
-                var imageFile = normalTileset.Value;
-                var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(imageFile);
+                var externalReference = externalReferenceRepository.GetExternalReference<Texture2DContent>(normalTileset);
                 writer.WriteExternalReference(externalReference);
             }
         }
