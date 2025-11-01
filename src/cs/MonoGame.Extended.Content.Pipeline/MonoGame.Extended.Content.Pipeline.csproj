@@ -40,7 +40,7 @@
   </ItemGroup>
   <!--<ItemGroup>
     <None Update="Newtonsoft.Json.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>-->
 </Project>
